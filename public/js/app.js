@@ -23529,7 +23529,8 @@ var userNavigation = [{
     BellIcon: _heroicons_vue_outline__WEBPACK_IMPORTED_MODULE_1__.BellIcon,
     MenuAlt2Icon: _heroicons_vue_outline__WEBPACK_IMPORTED_MODULE_1__.MenuAlt2Icon,
     SearchIcon: _heroicons_vue_solid__WEBPACK_IMPORTED_MODULE_2__.SearchIcon,
-    XIcon: _heroicons_vue_outline__WEBPACK_IMPORTED_MODULE_1__.XIcon
+    XIcon: _heroicons_vue_outline__WEBPACK_IMPORTED_MODULE_1__.XIcon,
+    Link: _inertiajs_inertia_vue3__WEBPACK_IMPORTED_MODULE_3__.Link
   },
   setup: function setup() {
     var sidebarOpen = (0,vue__WEBPACK_IMPORTED_MODULE_0__.ref)(false);
@@ -26995,7 +26996,7 @@ var _hoisted_11 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElement
 }, " ID "), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("th", {
   "class": "px-3 py-2 lg:px-6 lg:py-3 bg-gray-50 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
 }, " Answer "), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("th", {
-  "class": "px-3 py-2 lg:px-6 lg:py-3 bg-gray-50 text-right text-xs font-medium text-gray-500 uppercase tracking-wider"
+  "class": "px-3 py-2 lg:px-6 lg:py-3 bg-gray-50 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
 }, " Correct/Wrong ")])], -1
 /* HOISTED */
 );
@@ -27063,9 +27064,9 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
         ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("td", _hoisted_14, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_15, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(answer.name), 1
         /* TEXT */
         )]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("td", _hoisted_16, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_Switch, {
-          modelValue: answer.status,
+          modelValue: answer.isCorrect,
           "onUpdate:modelValue": function onUpdateModelValue($event) {
-            return answer.status = $event;
+            return answer.isCorrect = $event;
           },
           onClick: function onClick($event) {
             return _ctx.isCorrectAnswer(answer);
@@ -27075,12 +27076,12 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
           "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
             return [_hoisted_17, _hoisted_18, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", {
               "aria-hidden": "true",
-              "class": (0,vue__WEBPACK_IMPORTED_MODULE_0__.normalizeClass)([answer.status ? 'bg-indigo-600' : 'bg-gray-200', 'pointer-events-none absolute h-4 w-9 mx-auto rounded-full transition-colors ease-in-out duration-200'])
+              "class": (0,vue__WEBPACK_IMPORTED_MODULE_0__.normalizeClass)([answer.isCorrect ? 'bg-indigo-600' : 'bg-gray-200', 'pointer-events-none absolute h-4 w-9 mx-auto rounded-full transition-colors ease-in-out duration-200'])
             }, null, 2
             /* CLASS */
             ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", {
               "aria-hidden": "true",
-              "class": (0,vue__WEBPACK_IMPORTED_MODULE_0__.normalizeClass)([answer.status ? 'translate-x-5' : 'translate-x-0', 'pointer-events-none absolute left-0 inline-block h-5 w-5 border border-gray-200 rounded-full bg-white shadow transform ring-0 transition-transform ease-in-out duration-200'])
+              "class": (0,vue__WEBPACK_IMPORTED_MODULE_0__.normalizeClass)([answer.isCorrect ? 'translate-x-5' : 'translate-x-0', 'pointer-events-none absolute left-0 inline-block h-5 w-5 border border-gray-200 rounded-full bg-white shadow transform ring-0 transition-transform ease-in-out duration-200'])
             }, null, 2
             /* CLASS */
             )];

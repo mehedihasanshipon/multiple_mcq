@@ -37,4 +37,6 @@ Route::resource('questions',QuestionController::class);
 Route::get('/question/{id}/answers', [AnswerController::class,'index'])->name('answers.index');
 Route::get('/question/{id}/answers/create', [AnswerController::class,'create'])->name('answers.create');
 Route::post('/answers/submit', [AnswerController::class,'store'])->name('answers.store');
+Route::post('/answers/{id}/status',[AnswerController::class,'status'])->name('answers.status');
+
 

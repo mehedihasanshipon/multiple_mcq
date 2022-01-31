@@ -73,7 +73,7 @@ class AnswerController extends Controller
     public function status(Request $request,$id)
     {
         $answer = Answer::findOrFail($id);
-
+        
         $answer->update([
             'isCorrect'=>$request->isCorrect
         ]);

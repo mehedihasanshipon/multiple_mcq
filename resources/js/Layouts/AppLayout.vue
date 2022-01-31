@@ -163,6 +163,7 @@ export default {
     MenuAlt2Icon,
     SearchIcon,
     XIcon,
+    Link
   },
   setup() {
     const sidebarOpen = ref(false)

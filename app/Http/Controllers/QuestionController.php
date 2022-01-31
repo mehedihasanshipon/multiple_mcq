@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\QuestionRequest;
+use App\Http\Resources\QuestionResource;
 use App\Models\Question;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
@@ -19,6 +20,10 @@ class QuestionController extends Controller
     public function index()
     {
         $questions = Question::get();
+
+        // if (Request::wantsJson()) {
+        //     return new QuestionResource($questions);
+        // }
 
         return Inertia::render('Question/Index',[
             'questions' => $questions
@@ -49,8 +54,10 @@ class QuestionController extends Controller
             'mark'=>$request->mark,
         ]);
 
-        // return new QuestionResource($question);
-
+        // if (Request::wantsJson()) {
+        //     return new QuestionResource($question);
+        // }
+          
         return Redirect::route('questions.index')->with('success','Question Added Successfully!');
     }
 
